@@ -78,6 +78,8 @@ fn solve(text: []const u8) !u32 {
             .{ firstDigit, lastDigit },
         );
         const num = try std.fmt.parseInt(u32, numString, 10);
+        // or alternatively, use math
+        // const num = (firstDigit - '0') * 10 + (lastDigit - '0');
 
         sum += num;
     }
